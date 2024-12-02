@@ -94,7 +94,7 @@ func TestWithMultipleOptionsWithErrorsTransformer(t *testing.T) {
 	v := New(opt)
 	opt.apply(v)
 
-	if v.helper.transformError == nil {
+	if v.transformError == nil {
 		t.Errorf("expected transformError to be set")
 	}
 }

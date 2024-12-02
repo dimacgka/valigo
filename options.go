@@ -45,6 +45,6 @@ func WithFieldLocationNamingFn(fn func(field fmap.Field) string) Option {
 // WithErrorsTransformer returns an Option that sets the transformer for the Validator.
 func WithErrorsTransformer(fn func(errs []shared.Error) []error) Option {
 	return optionFunc(func(v *Validator) {
-		v.helper.transformError = fn
+		v.transformError = fn
 	})
 }
